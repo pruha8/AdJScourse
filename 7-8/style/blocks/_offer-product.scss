@@ -1,0 +1,31 @@
+.offer-wrap-product {
+    margin-bottom: 129px;
+}
+
+
+
+
+@media (max-width: $tablet-breakpoint) {
+    .offer-cardbox {
+        flex-direction: row-reverse;
+    }
+    .offer-card-tablet-product {
+        display: none;
+    }
+}
+
+@media (max-width: $mobile-breakpoint){
+    .offer-wrap-product {
+        margin-bottom: 64px;
+    }
+    .offer-cardbox-gap {
+        gap: 0px;
+    }
+    .offer-card-tablet-product {
+        display: block;
+    }
+    .offer-card-mobile-product {
+        display: none;
+    }
+
+}

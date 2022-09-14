@@ -1,0 +1,193 @@
+.description {
+    margin-bottom: 128px;
+    &-wrap {
+        background-color:  #FFFFFF;
+        border: 1px solid rgba(234, 234, 234, 1);
+        margin-top: -$shift;
+        padding-bottom: 64px;
+    }
+    &-top {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    &-titel {
+        font-weight: 300;
+        font-size: $font-size - 2;
+        line-height: 17px;
+        color: $main-color;
+        padding-top: 64px;
+        padding-bottom: 12px;
+        &-product {
+            font-weight: 300;
+            font-size: $font-size + 2;
+            line-height: 22px;
+            color: #4D4D4D;
+            padding-top: 12px;
+            padding-bottom: 48px;
+        }
+    }
+    &-text {
+        width: 555px;
+        height: 51px;
+        font-weight: 300;
+        font-size: $font-size - 2;
+        line-height: 17px;
+        color: #5E5E5E;
+    }
+    &-price {
+        font-weight: 300;
+        font-size: $font-size + 8;
+        line-height: 29px;
+        color: #EF5B70;
+        padding-top: 32px;
+        padding-bottom: 64px;
+    }
+}
+
+.hr-color-top {
+    width: 63px;
+    height: 3px;
+    border: none;
+    background-color: #EF5B70;
+    color: #EF5B70;
+
+}
+.hr-color-bottom {
+    width: 642px;
+    height: 1px;
+    border: none;
+    background-color: #EAEAEA;
+    color: #EAEAEA;
+}
+
+.description-strainer {
+    @include flex-argument(flex, center);
+    margin-top: 64px;
+}
+.description-strainer-box {
+    display: flex;
+    padding-right: 28px;
+ }
+    
+::-webkit-details-marker {display: none;}
+.description-strainer-list {
+    display: block;
+    font-size: $font-size - 2;
+    line-height: 17px;
+    cursor: pointer;
+    color: #6F6E6E;
+    fill: #6F6E6E;
+    }
+.description-sign-svg {
+    margin-left: 10px;
+}
+    
+    
+.description-strainer-item[open] .description-strainer-list {
+    color: #EF5B70;
+    fill: #EF5B70;
+    z-index: 10001;
+    position: relative;
+    background: #FFFFFF;
+}
+    
+    
+.description-strainer-button {
+    position: absolute;
+    z-index: 10000;
+    background: #FFFFFF;
+    box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+    padding: 7px 30px 6px 9px;
+    
+}
+.description-strainer-button-box {
+    text-align: left;
+    font-size: $font-size - 2;
+    line-height: 16px;
+    color: #6F6E6E;
+    padding-bottom: 6px;
+    
+}
+    
+.description-btn-checkbox {
+    width: 12px;
+    height: 12px;
+    margin-right: 11px; 
+}
+    
+
+.description-cart {
+    @include flex-argument(flex, center);
+    align-items: center;
+    text-align: center;
+    margin-top: 48px;
+    &-link {
+        background-color: #FFFFFF;
+        text-decoration: none;
+        border: 1px solid #F26376;
+        font-size: $font-size;
+        line-height: 19px;
+        color: #F26376;
+        padding: 15px 57px 9px 24px;
+        @include flex-argument(flex, left);
+        align-items: center;
+        fill: #EF5B70;
+        gap: 23px;
+        @include transition-button;
+        &:hover {
+            color: #FFFFFF;
+            background-color: $main-color;
+            fill: #FFFFFF;
+            border: 1px solid $main-color;
+            // box-shadow: 17px 19px 24px 0px rgba(0, 0, 0, 0.13);
+
+        }
+    } 
+}
+
+@media (max-width: $tablet-breakpoint) {
+    .description-wrap {
+        height: 600px;
+        margin-top: 0px;
+        width: 100%;
+        
+        }
+    }
+@media (max-width: $mobile-breakpoint) {
+    .description {
+        margin-bottom: 64px;
+    }
+    .description-titel-product {
+        padding-bottom: 31px;
+    }
+    .description-text {
+        width: 326px;
+        height: 105px;
+        line-height: 143.1%;
+    }
+    .description-price {
+    padding-bottom: 31px;
+    }
+    .hr-color-bottom {
+        width: 175px;
+    }
+    .description-strainer {
+        margin-top: 49px;
+    }
+    .description-strainer-list {
+        font-size: $font-size - 6;
+    line-height: 12px;
+    }
+    .description-cart {
+        margin-top: 64px;
+    }
+    .description-strainer-box {
+        padding-right: 0px;
+    }
+    .description-strainer-list-padding {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+}

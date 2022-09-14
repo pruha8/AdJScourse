@@ -1,0 +1,15 @@
+@mixin flex-between {
+    display: flex;
+    justify-content: space-between;
+}
+@mixin flex-argument($display, $justify-content) {
+    display: $display;
+    justify-content: $justify-content;
+}
+@mixin transition-button {
+    transition: background-color 0.3s, color 0.3s;
+}
+
+@mixin transition-button-fill {
+    transition: background-color 0.3s, color 0.3s, fill 0.3s;
+}

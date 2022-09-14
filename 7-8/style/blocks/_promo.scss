@@ -1,0 +1,91 @@
+.promo {
+    background-color: #F1E4E6;
+}
+.promo-wrap{
+    height: 764px;
+    background-image: url(../img/promo-picture.png);
+    background-repeat: no-repeat;
+    background-position-x: -225px;
+    background-position-y: bottom;
+    @include flex-argument(flex, flex-end);
+    align-items: center;
+}
+@media (max-width: $tablet-breakpoint){
+    .promo-wrap {
+        height: 363px;
+        background-image: url(../img/promo-picture-tablet.png);
+        background-repeat: no-repeat;
+        background-position-x: -30px;
+        background-position-y: bottom;
+        @include flex-argument(flex, flex-end);
+        align-items: center;
+    }
+}
+@media (max-width: $mobile-breakpoint){
+    .promo-wrap {
+        height: 363px;
+        background-image: none;
+        @include flex-argument(flex, center);
+    }
+}
+
+.promo-title {
+    font-weight: 900;
+    font-size: $font-size * 3;
+    line-height: 36px;
+    color: #222222;
+    border-left: 12px solid $main-color;
+    padding-left: 16px;
+    margin-right: 90px;
+    &-small {
+        font-weight: bold;
+        font-size: $font-size * 2;
+        line-height: 38px;
+        color: #222222;
+    }
+    &-pink {
+        color: $main-color;
+    }
+}
+
+@media (max-width: $tablet-breakpoint) {
+    .promo-title {
+        font-weight: 900;
+        font-size: $font-size * 3 - 4;
+        line-height: 29px;
+        color: #222222;
+        border-left: 12px solid $main-color;
+        padding-left: 16px;
+        margin-right: 0px;
+        &-small {
+            line-height: 29px;
+            font-weight: bold;
+            font-size: $font-size + 8;
+            color: #222222;
+        }
+        &-pink {
+            color: $main-color;
+        }
+    }
+}
+    @media (max-width: $mobile-breakpoint){
+
+        .promo-title {
+            font-weight: 900;
+            font-size: $font-size + 6;
+            line-height: 24px;
+            color: #222222;
+            border-left: 12px solid $main-color;
+            padding-left: 16px;
+            // margin-right: 0px;
+            &-small {
+                line-height: 24px;
+                font-weight: bold;
+                font-size: $font-size + 4;
+                color: #222222;
+            }
+            &-pink {
+                color: $main-color;
+            }
+        }
+    }

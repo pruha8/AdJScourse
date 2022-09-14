@@ -1,0 +1,87 @@
+.header {
+    background-color: black;
+    color: white;
+    position: relative
+}
+.header-wrap {
+    @include flex-between;
+    align-items: center; 
+    padding-top: 18px;
+    padding-bottom: 18px;
+}
+.header-col-1 {
+    display: flex;
+}
+.logo-link {
+    text-decoration: none;
+    color: transparent;
+    margin-right: 41px;
+}
+.button-search, .button-menu {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    fill: #E8E8E8;
+    transition: fill 0.3s;
+}
+.button-search:hover, .button-menu:hover {
+    fill: $main-color;
+}
+.header-col-2 {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+} 
+.register-link, .crate-link {
+    text-decoration: none;
+    color: transparent; 
+    fill: #E8E8E8;
+    transition: fill 0.3s;
+}
+.register-link:hover, .crate-link:hover {
+    fill: $main-color;
+} 
+.register-link {
+    margin-left: 33px;
+    margin-right: 33px;
+}
+.crate-link {
+    position: relative;
+}
+
+.crate-link-pointer {
+    display: inline-block;
+    width: 19px;
+    height: 19px;
+    color: white;
+    background: #f16d7f;
+    border-radius: 50%;
+    position: absolute;
+    text-align: center;
+    right: -8px;
+    top: -19px;
+    font-size: 12px;
+    line-height: 19px;
+}
+
+
+@media (max-width: $tablet-breakpoint) {
+    .header-col-1 {
+        padding-left: 15px;
+    }
+    .header-col-2 {
+     padding-right: 25px;
+    } 
+}
+
+@media (max-width: $mobile-breakpoint){
+    .header-col-1 {
+        padding-left: 8px;
+    }
+    .header-col-2 {
+        padding-right: 8px;
+    } 
+    .register-link, .crate-link {
+        display: none;
+    }
+}
