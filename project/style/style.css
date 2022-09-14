@@ -1,0 +1,35 @@
+body {
+    margin: 0, auto;
+    font-family: Lato, sans-serif;
+    width: 1200px;
+}
+header {
+    display: flex;
+    justify-content: start;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-left: 40px;
+}
+.btn-cart {
+    background-color: yellowgreen;
+}
+.products {
+    display: flex;
+    justify-content: space-between;
+}
+
+.product-item {
+    width: 25%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: antiquewhite;
+}
+img {
+    width: 200px;
+    height: 200px;
+}
+.buy-btn {
+    background-color: azure;
+    margin-bottom: 20px;
+}
